@@ -1,0 +1,128 @@
+5/16/2023
+- removed commands in favor of buttons
+- made enter work to read text and clear text
+
+5/17/2023
+- added sliders w/ fixed alignment and adjustable fraction size
+- added save and load for slider values
+
+5/18/2023
+- added saving window positions
+- changed slider max and min
+- added progress label for tts text
+- partially implemented scroll area --> added it and boxes, but need to rework tracking to fit with it
+- temp. disabled scroll area
+- made scrollbars look like mac scrollbars
+
+5/19/2023
+- made textbox round, and fixed margins so that text wasn't touching edge
+
+5/20/2023
+- added soundboard buttons and page buttons and tracking label
+- added dialog box for button customization
+- made hard decision to remove soundboard--too many features, will constitute a seperate project
+
+5/22/2023
+- made custom class for sound device selection
+
+6/9/2023
+- started refactoring code to PyQt6
+
+6/15/2023
+- added combobox for device selection
+- added combobox save setting and load setting
+- qt6 automatically adjusts for aspect ratios now which is pretty neat and helpful
+- moved to set window size
+- made window draggable
+
+6/16/2023
+- sent issue to github of qframelesswindow, got title issue resolved (there were two titles)
+- wrote function to change how comboboxes handle long string
+
+6/17/2023
+- fixed annoying glitch with the combobox abbreviation -- resizeEvent's dont take priority (pain)
+- TODO: fix it better!!! resizeEvent should register the variables..
+- added rate and volume sliders
+
+6/18 - 6/19/2023
+- working on collapsing header
+
+6/20/2023
+- collapsible header works :D
+
+6/21/2023
+- collapsible header works
+- fixed annoying resizing issue--window was bigger after section collapsible
+- changed to dark mode, mimicing windows settings
+- added send/pause button
+- added widget "cards"
+
+6/22/2023
+- added output textedit
+
+6/23/2023
+- window now can only be moved with pseudo titlebar
+- fixed scrollbar
+- customized warning message
+
+6/24/2023
+- added dialog -> doesn't disable mainwdindow
+
+6/25/2023
+- added widgets to dialog layout
+
+7/7/2023
+- still trying to fix the dict dialog
+
+9/7/2023
+- tts backend; playback sounds different than the file that is made (annoying), going to rework using pyqt
+
+9/8/2023
+- reworked to use pyqt6 mediaplayer --> output device selection now works, needs github
+
+9/11/2023
+- output device selection had a glitch, so fixed the combobox for it
+- patched the combobox to register updates to the input/output device list when a new device is inserted
+- now glitch where item of combobox defaults to none whenever device list updated; use lists to check for same item or default to none as solution?
+- fixed combobox item to remain the same when device list updated
+- on tts end, made tts file play through qt6 with device selection
+
+9/12/2023
+- added input validation for text; at least one character to enter
+- started adding tts to main file, need to learn QThread though to keep it thread safe
+- put tts and transcribe on a seperate thread, struggling with mediaplayer invalid media issue
+
+9/13/2023
+- fixed tts thread running out of scope issue-
+- mediaplayer thread still running into invalid media
+- nvm mediaplayer thread was also having out of scope issues
+- wOOHOO IT SPEAKS
+
+9/14/2023
+
+
+todo:
+- update text
+- mediaplayer pause
+- automatic reset when media is done playing
+- shortcuts -> dictionary button
+- customize slider tooltip
+- when moving out of widget, change focus to mainwindow
+- fix textedit scrollbar size
+- fix eventfilter exceptions -> declare all event filter install at once
+- dict changed needs to update mainwindow personal dict
+- allow changing of text by whisper labelling model
+- trim tts file to remove ending silence
+
+ideas:
+- voice, input output, need to be accessible -> settings
+- special effects menu (reverb whatnot)
+- pause button (it gotta work)
+- detect timestamps of speech
+- rig up basic text-to-speech for now
+- color schemes
+- keybind for focusing window
+- select voice
+- slang dictionary
+
+
