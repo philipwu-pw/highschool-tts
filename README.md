@@ -1,2 +1,1 @@
-# VRC-TTS
-A TTS software built for VRC, but works elsewhere too! :3
+TTS Program built as a side project throughout highschool. Not fully functional, but close enough I suppose.
